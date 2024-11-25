@@ -32,10 +32,10 @@ import twitter from "../assets/twitter.svg";
 import youtube from "../assets/youtube.svg";
 import messenger from "../assets/messenger.svg";
 
-const heroapi = {
+const homeapi = {
   title: "Get Your Kicks Now",
   subtitle: "Latest Sport Shoes",
-  img: heroimg,
+  img: sneakershoe,
   btntext: "Explore Product",
   videos: [
     { imgsrc: vcover1, clip: clip },
@@ -375,4 +375,4 @@ const footerAPI = {
 };
 
 
-export { heroapi, footerAPI, story, sneaker, highlight, toprateslaes, popularsales };
+export { homeapi, footerAPI, story, sneaker, highlight, toprateslaes, popularsales };

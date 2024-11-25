@@ -1,19 +1,21 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route, unstable_HistoryRouter as HistoryRouter } from "react-router-dom";
-import Home from "./pages/Home";
-import About from "./pages/About";
-
-function App() {
+import React from 'react'
+import {Cart, Home, Footer} from './components'
+import {Sales} from './components'
+import {Navbar} from './components'
+import { homeapi, popularsales, toprateslaes, footerAPI } from './data/data.jsx'
+const App = () => {
   return (
     <>
-      <Router future={{ v7_startTransition: true ,v7_relativeSplatPath: true}}>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-        </Routes>
-      </Router>
+    <Navbar/>
+    <Cart/>
+    <main>
+      <Home homeapi = {homeapi}/>
+      <Sales endpoint={popularsales} ifExists />
+      <Sales endpoint={toprateslaes} />
+    </main>
+    <Footer footerAPI={footerAPI} />
     </>
-  );
+  )
 }
-
-export default App;
+ 
+export default App
